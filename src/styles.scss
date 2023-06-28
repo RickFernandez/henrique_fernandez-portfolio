@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+@import 'assets/variables.scss';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fira Code', sans-serif;
+}
+
+.headline-text {
+  font-size: 62px;
+}
+
+.subheadline-text {
+  font-size: 32px;
+}
+
+.body-text {
+  font-size: 18px;
+}
+
+.label-text {
+  font-size: 16px;
+}
+
+.code-snippet-text {
+  font-size: 14px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  color: $primary-black;
+  background-color: $accent-orange;
+}
+
+.btrn-primary:hover {
+  background-color: $btn-primary-hover;
+}
+
+.btn-default {
+  color: $secondary-white;
+  background-color: $btn-default;
+}
+
+.btrn-default:hover {
+  background-color: $btn-default-hover;
+}
+
+.btn-ghost {
+  color: $secondary-white;
+  background-color: transparent;
+  border: 1px solid $secondary-white;
+}
+
+.btn-ghost:hover {
+  border: 1px solid rgba(255, 255, 255, 0.70);
+}
