@@ -56,12 +56,16 @@ body {
   border-radius: 8px;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .btn-primary {
   color: $primary-black;
   background-color: $accent-orange;
 }
 
-.btrn-primary:hover {
+.btn-primary:hover {
   background-color: $btn-primary-hover;
 }
 
@@ -70,7 +74,7 @@ body {
   background-color: $btn-default;
 }
 
-.btrn-default:hover {
+.btn-default:hover {
   background-color: $btn-default-hover;
 }
 
@@ -82,4 +86,11 @@ body {
 
 .btn-ghost:hover {
   border: 1px solid rgba(255, 255, 255, 0.70);
+}
+
+.btn-reset {
+  border: none;
+  outline: none;
+  color: $secondary-white;
+  background-color: transparent;
 }

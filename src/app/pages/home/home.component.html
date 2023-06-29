@@ -6,7 +6,7 @@
       <p class="subheadline-text">> desenvolvedor Full Stack</p>
     </div>
     <div class="text-codes">
-      <p class="label-text comment">// Complete o jogo para continuar</p>
+      <p class="label-text comment">// Vença o jogo para continuar</p>
       <p class="label-text comment">// Você também pode ver na minha página do Github</p>
       <a class="label-text github" href="https://github.com/RickFernandez" target="_blank">
         <span>const </span>
@@ -16,7 +16,63 @@
       </a>
     </div>
   </div>
-  <div class="game">
+  <div class="game-container">
+    <div class="game">
+      <div class="battle">
+        <div class="battle-player user">
+          <p class="body-text">Você</p>
+          <img src="assets/images/{{userChoice}}.png" alt="" class="user-choice" [ngClass]="onAnimate ? 'animate' : ''">
+        </div>
+        <div class="battle-player computer">
+          <p class="body-text">Eu</p>
+          <img src="assets/images/{{computerChoice}}.png" alt="" class="computer-choice" [ngClass]="onAnimate ? 'animate' : ''">
+        </div>
+      </div>
+      <div class="options">
+        <button class="btn btn-default" (click)="onUserChoosing($event.target)">Pedra</button>
+        <button class="btn btn-default" (click)="onUserChoosing($event.target)">Papel</button>
+        <button class="btn btn-default" (click)="onUserChoosing($event.target)">Tesoura</button>
+      </div>
 
+      <div *ngIf="winner">
+        <div *ngIf="winner && winner == 'eu'" class="end-game">
+          <p class="subheadline-text">
+            Eu falei que não pegaria leve! Hahaha
+          </p>
+          <button class="btn btn-reset" (click)="onStartGame()">
+            Jogar novamente
+          </button>
+        </div>
+        <div *ngIf="winner && winner == 'você'" class="end-game">
+          <p class="subheadline-text">
+            Você venceu, parabéns!
+          </p>
+          <div class="buttons">
+            <button class="btn btn-reset" (click)="onStartGame()">
+              Jogar novamente
+            </button>
+            <a class="btn btn-primary" routerLink="/about-me">
+              Avançar
+            </a>
+          </div>
+        </div>
+        <div *ngIf="winner && winner == 'empate'" class="end-game">
+          <p class="subheadline-text">
+            Dessa vez empatou, na próxima não pegarei leve!
+          </p>
+          <button class="btn btn-reset" (click)="onStartGame()">
+            Jogar novamente
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="comments">
+        <p class="code-snippet-text">// Será que você consegue me derrotar?</p>
+        <p class="code-snippet-text">// não vou pegar leve! 😎</p>
+        <p class="code-snippet-text">// Boa sorte!</p>
+      </div>
+      <a class="btn btn-ghost" routerLink="/about-me">Pular</a>
+    </div>
   </div>
 </section>

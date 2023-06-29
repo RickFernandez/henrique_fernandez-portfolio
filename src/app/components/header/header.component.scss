@@ -43,7 +43,7 @@ header {
     }
 
     li:hover,
-    li:has(> a.active),
+    li.active,
     a.contact:hover,
     a.contact.active  {
       cursor: pointer;
