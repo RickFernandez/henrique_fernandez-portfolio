@@ -43,7 +43,9 @@ header {
     }
 
     li:hover,
-    a.contact:hover {
+    li:has(> a.active),
+    a.contact:hover,
+    a.contact.active  {
       cursor: pointer;
       color: $secondary-white;
       border-bottom: 3px solid $accent-orange;
