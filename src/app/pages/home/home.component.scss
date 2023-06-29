@@ -1,0 +1,70 @@
+@import '../../styles/variables.scss';
+
+section {
+  height: 100%;
+  padding-inline: 25rem;
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  justify-content: space-between;
+
+  div.text-content {
+    display: flex;
+    gap: 8rem;
+    flex-direction: column;
+    align-items: flex-start;
+
+    div.text-title {
+      p.body-text,
+      h1 {
+        color: $secondary-white;
+      }
+
+      p.subheadline-text {
+        color: $secondary-blue;
+      }
+    }
+
+    div.text-codes {
+      p.comment {
+        color: $secondary-gray;
+        margin-bottom: 1rem;
+      }
+
+      a.github {
+        text-decoration: none;
+
+        span:first-child {
+          color: $secondary-blue;
+        }
+
+        span:nth-child(2) {
+          color: $accent-green;
+        }
+
+        span:nth-child(3) {
+          color: $secondary-white;
+        }
+
+        span:last-child {
+          color: $accent-orange;
+        }
+      }
+
+      a:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  div.game {
+    width: 510px;
+    height: 475px;
+    padding: 3.5rem;
+    border-radius: 8px;
+    border: 1px solid #0C1616;
+    background: linear-gradient(154deg, $accent-green 0%, $secondary-blue 100%);
+    box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.30) inset;
+    backdrop-filter: blur(32px);
+  }
+}

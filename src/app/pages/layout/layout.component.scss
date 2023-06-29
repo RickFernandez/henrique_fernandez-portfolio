@@ -6,4 +6,8 @@ div.container {
   border-radius: .8rem;
   background: $primary-blue;
   border: 1px solid $line-color;
+
+  main {
+    height: calc(100% - 12rem);
+  }
 }
