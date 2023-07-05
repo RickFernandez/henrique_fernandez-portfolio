@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  menuOpened: boolean = false;
+
+  onOpenMenu() {
+    this.menuOpened = !this.menuOpened;
+  }
 }

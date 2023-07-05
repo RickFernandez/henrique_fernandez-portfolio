@@ -1,6 +1,6 @@
-<header>
+<header class="desktop">
   <h2 class="label-text">Henrique Fernandez</h2>
-  <nav>
+  <nav class="desktop-menu-list">
     <ul>
       <li class="label-text" routerLink="/home" routerLinkActive="active">
         <a>
@@ -22,4 +22,39 @@
       _contato
     </a>
   </nav>
+
+  <div class="mobile-menu">
+    <h2 class="label-text">Henrique Fernandez</h2>
+
+    <button class="open-menu" (click)="onOpenMenu()">
+      <img *ngIf="!menuOpened" src="../../../assets/icons/hamburguer_menu-icon.svg" alt="Ícone de um menu hambúrguer">
+      <img *ngIf="menuOpened" src="../../../assets/icons/x-icon.svg" alt="Ícone de fechar o menu hambúrguer">
+    </button>
+
+    <nav class="responsive-menu-list" #menuList *ngIf="menuOpened">
+      <ul>
+        <li class="label-text" routerLink="/home" routerLinkActive="active">
+          <a>
+            _hello
+          </a>
+        </li>
+        <li class="label-text" routerLink="/about-me" routerLinkActive="active">
+          <a>
+            _sobre-mim
+          </a>
+        </li>
+        <li class="label-text">
+          <a>
+            _projetos
+          </a>
+        </li>
+        <li class="label-text">
+          <a>
+            _contato
+          </a>
+        </li>
+      </ul>
+      <app-footer class="footer"></app-footer>
+    </nav>
+  </div>
 </header>
