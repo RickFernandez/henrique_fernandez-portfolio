@@ -13,6 +13,7 @@ header {
     padding-inline: 1rem;
     display: flex;
     align-items: center;
+    white-space: nowrap;
   }
 
   nav{
@@ -57,11 +58,10 @@ header {
       border-bottom: 3px solid $accent-orange;
     }
   }
-}
 
-.responsive-menu,
-.responsive-menu-list {
-  display: none;
+  .mobile-menu {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {

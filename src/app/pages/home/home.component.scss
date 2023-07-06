@@ -27,6 +27,10 @@ section {
     }
 
     div.text-codes {
+      p.mobile {
+        display: none;
+      }
+
       p.comment {
         color: $secondary-gray;
         margin-bottom: 1rem;
@@ -133,7 +137,6 @@ section {
         width: 100%;
         display: flex;
         align-items: center;
-        // flex-direction: column;
         justify-content: space-between;
 
         button {
@@ -283,5 +286,56 @@ section {
   section::-webkit-scrollbar-thumb {
     background-color: $secondary-blue;
     border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    overflow-x: hidden;
+
+    div.game-container {
+      gap: 3rem;
+      justify-content: center;
+
+      img {
+        width: 7rem !important;
+      }
+
+      button {
+        width: auto !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  section {
+    padding-block: 5rem;
+    overflow-x: hidden;
+
+    div.text-content {
+      height: 100%;
+      justify-content: space-between;
+
+      div.text-title {
+        h1 {
+          margin-block: .8rem;
+        }
+      }
+
+      div.text-codes {
+        p.desktop {
+          display: none;
+        }
+
+        p.mobile {
+          display: block;
+        }
+      }
+    }
+
+    div.game-container {
+      display: none;
+    }
   }
 }

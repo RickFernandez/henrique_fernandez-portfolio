@@ -8,7 +8,8 @@ footer {
   border-top: 1px solid $line-color;
 
   p {
-    width: 10%;
+    width: auto;
+    white-space: nowrap;
     padding-inline: 1rem;
   }
 
@@ -26,10 +27,10 @@ footer {
       align-items: center;
 
       li {
+        width: 100%;
         height: 100%;
         padding: 0 1.5rem;
         border-left: 1px solid $line-color;
-        border-right: 1px solid $line-color;
         display: flex;
         align-items: center;
         transition: all .2s;
@@ -40,6 +41,14 @@ footer {
           opacity: .3;
           transition: all .3s;
         }
+      }
+
+      li:nth-child(2) {
+        border-right: 1px solid $line-color;
+      }
+
+      li.github {
+        display: none;
       }
 
       li:hover {
@@ -88,26 +97,25 @@ footer {
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 425px) {
   footer {
-    p {
-      width: 12%;
+    nav {
+      ul {
+        width: 100%;
+        justify-content: space-between;
+
+        li {
+          justify-content: center;
+        }
+
+        li.github {
+          display: flex;
+        }
+      }
+
+      a.github {
+        display: none;
+      }
     }
   }
-}
-
-@media screen and (max-width: 1024px) {
-  footer {
-    p {
-      width: 18%;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  // footer {
-  //   p {
-  //     width: 18%;
-  //   }
-  // }
 }
