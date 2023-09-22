@@ -1,0 +1,61 @@
+@import '../../../shared/styles/variables.scss';
+
+section {
+  width: 100%;
+  height: 100%;
+  color: $secondary-gray;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+
+  .experience {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .inline {
+      display: flex;
+      gap: 5px;
+    }
+
+    h2 {
+      font-size: 16px;
+      color: $secondary-white;
+    }
+
+    span, p {
+      font-size: 16px;
+      color: $secondary-gray;
+    }
+
+    a {
+      font-size: 16px;
+      color: $secondary-blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      cursor: pointer;
+    }
+
+    .resume > p {
+      padding-left: 20px;
+    }
+
+    .activities-exadel,
+    .activities-btg {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        padding-left: 20px;
+      }
+
+      p {
+        padding-left: 40px;
+      }
+    }
+  }
+}
