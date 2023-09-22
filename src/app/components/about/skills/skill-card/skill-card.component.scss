@@ -1,0 +1,26 @@
+@import '../../../../shared/styles/variables.scss';
+
+div {
+  width: 120px;
+  height: 120px;
+  padding: 1rem;
+  display: flex;
+  gap: .8rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #010C15;
+  border: 1px solid $line-color;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  p {
+    color: $secondary-gray;
+    font-size: 1rem;
+    text-align: center;
+    word-wrap: break-word;
+  }
+}
