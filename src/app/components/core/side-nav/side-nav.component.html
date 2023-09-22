@@ -1,0 +1,95 @@
+<aside>
+  <div class="menu-container" *ngIf="sideType && sideType == '/about-me'">
+    <div class="first-menu">
+      <img src="../../../assets/icons/terminal-icon.svg" alt="" />
+      <img src="../../../assets/icons/selected_menu-icon.svg" alt="" />
+      <img src="../../../assets/icons/game-icon.svg" alt="" />
+    </div>
+    <div class="second-menu">
+      <nav>
+        <div class="personal-infos" (click)="onPersonalMenu()">
+          <img
+            src="{{
+              personalMenu
+                ? '../../../assets/icons/arrow_down-icon.svg'
+                : '../../../assets/icons/arrow_right-icon.svg'
+            }}"
+            alt=""
+          />
+          <h4 class="label-text">informacoes-pessoais</h4>
+        </div>
+        <ul class="personal-info-menu" *ngIf="personalMenu">
+          <li routerLink="/about-me/bio" routerLinkActive="active">
+            <img src="../../../assets/icons/sub-menu-arrow.svg" alt="" />
+            <img src="../../../assets/icons/folder-orange-icon.svg" alt="" />
+            <a class="label-text">bio</a>
+          </li>
+          <li routerLink="/about-me/skills" routerLinkActive="active">
+            <img src="../../../assets/icons/sub-menu-arrow.svg" alt="" />
+            <img src="../../../assets/icons/folder-salmon-icon.svg" alt="" />
+            <a class="label-text">skills</a>
+          </li>
+          <li routerLink="/about-me/experiences" routerLinkActive="active">
+            <img src="../../../assets/icons/sub-menu-arrow.svg" alt="" />
+            <img src="../../../assets/icons/folder-green-icon.svg" alt="" />
+            <a class="label-text">experiencias</a>
+          </li>
+          <li routerLink="/about-me/certifieds" routerLinkActive="active">
+            <img src="../../../assets/icons/sub-menu-arrow.svg" alt="" />
+            <img src="../../../assets/icons/folder-blue-icon.svg" alt="" />
+            <a class="label-text">certificados</a>
+          </li>
+        </ul>
+        <div class="contact-infos" (click)="onContactMenu()">
+          <img
+            src="{{
+              contactMenu
+                ? '../../../assets/icons/arrow_down-icon.svg'
+                : '../../../assets/icons/arrow_right-icon.svg'
+            }}"
+            alt=""
+          />
+          <h4>contatos</h4>
+        </div>
+        <ul class="contact-menu" *ngIf="contactMenu">
+          <li>
+            <img src="../../../assets/icons/mail-iconemail-icon.svg" alt="" />
+            <a class="label-text">rickfernandez03@gmail.com</a>
+          </li>
+          <li>
+            <img src="../../../assets/icons/phone-icon.svg" alt="" />
+            <a class="label-text">+55 (11)96424-9643</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="menu-projects" *ngIf="sideType && sideType == '/projects'">
+    <div class="menu-title" (click)="onProjectMenu()">
+      <img
+        src="{{
+          projectMenu
+            ? '../../../assets/icons/arrow_down-icon.svg'
+            : '../../../assets/icons/arrow_right-icon.svg'
+        }}"
+        alt=""
+      />
+      <h4>Filtrar projetos</h4>
+    </div>
+    <div *ngIf="projectMenu" class="technology-container">
+      <div *ngFor="let option of filterOptions" class="radio-label">
+        <input
+          type="radio"
+          [ngModel]="option.selected"
+          (ngModelChange)="updateFilter(option)"
+          [name]="option.value"
+          id="{{ option.value }}"
+        />
+        <img [src]="option.image" [alt]="option.label + 'ícone'" >
+        <label [ngClass]="{'selected': option.selected}" [for]="option.value">
+          {{ option.label }}
+        </label>
+      </div>
+    </div>
+  </div>
+</aside>
