@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../shared/styles/variables.scss";
 
 section {
   width: 100%;
@@ -72,10 +72,16 @@ section {
     align-items: flex-start;
 
     border-radius: 8px;
-    border: 1px solid #0C1616;
+    border: 1px solid #0c1616;
 
-    background: linear-gradient(154deg, rgb(60, 157, 147, .7) 50%, rgb(77, 91, 206, .7) 100%);
-    box-shadow: 70px 70px 100px -20px rgba(77, 92, 206, 0.2), -70px -70px 100px -20px rgba(67, 217, 173, 0.2), inset 0px 30px 0px -29px rgba(255, 255, 255, 0.514);
+    background: linear-gradient(
+      154deg,
+      rgb(60, 157, 147, 0.7) 50%,
+      rgb(77, 91, 206, 0.7) 100%
+    );
+    box-shadow: 70px 70px 100px -20px rgba(77, 92, 206, 0.2),
+      -70px -70px 100px -20px rgba(67, 217, 173, 0.2),
+      inset 0px 30px 0px -29px rgba(255, 255, 255, 0.514);
 
     div.game {
       height: 100%;
@@ -156,7 +162,7 @@ section {
         height: 100%;
         padding: 1.875rem;
 
-        border-radius: .8rem;
+        border-radius: 0.8rem;
         background-color: rgba(1, 22, 39, 0.97);
 
         display: flex;
@@ -186,7 +192,7 @@ section {
     div.content {
       height: 100%;
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       flex-direction: column;
       justify-content: space-between;
 
@@ -194,10 +200,10 @@ section {
         color: $secondary-white;
         border-radius: 8px;
         background: #00142430;
-        padding: .9375rem;
+        padding: 0.9375rem;
 
         p {
-          margin-bottom: .9375rem;
+          margin-bottom: 0.9375rem;
         }
       }
 
@@ -319,7 +325,7 @@ section {
 
       div.text-title {
         h1 {
-          margin-block: .8rem;
+          margin-block: 0.8rem;
         }
       }
 

@@ -21,27 +21,16 @@ export class HomeComponent {
     this.onStartGame();
   }
 
-  onUserChoosing(el: any): void {
+  onUserChoosing(userChoice: string): void {
     this.onAnimate = !this.onAnimate;
+    console.log(userChoice);
+
     setTimeout(() => {
-      if (el) {
-        switch(el.textContent) {
-          case 'Pedra':
-            this.userChoice = 'rock';
-            break;
+      this.userChoice = userChoice;
 
-          case 'Papel':
-            this.userChoice = 'paper';
-            break;
-
-          case 'Tesoura':
-            this.userChoice = 'scissors';
-            break;
-        }
-        this.onComputerChoosing();
-        this.checkingWhoWon(this.userChoice, this.computerChoice);
-        this.onAnimate = !this.onAnimate;
-      }
+      this.onComputerChoosing();
+      this.checkingWhoWon(this.userChoice, this.computerChoice);
+      this.onAnimate = !this.onAnimate;
     }, 2000);
   }
 

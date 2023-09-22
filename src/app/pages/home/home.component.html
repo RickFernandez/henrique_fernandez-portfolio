@@ -7,9 +7,15 @@
     </div>
     <div class="text-codes">
       <p class="label-text comment desktop">// Vença o jogo para continuar</p>
-      <p class="label-text comment desktop">// Você também pode ver na minha página do Github</p>
+      <p class="label-text comment desktop">
+        // Você também pode ver na minha página do Github
+      </p>
       <p class="label-text comment mobile">// Veja meu perfil do GitHub</p>
-      <a class="label-text github" href="https://github.com/RickFernandez" target="_blank">
+      <a
+        class="label-text github"
+        href="https://github.com/RickFernandez"
+        target="_blank"
+      >
         <span>const </span>
         <span>githubLink </span>
         <span>= </span>
@@ -22,39 +28,66 @@
       <div class="battle">
         <div class="battle-player user">
           <p class="body-text">Você</p>
-          <img src="assets/images/{{userChoice}}.png" alt="" class="user-choice" [ngClass]="onAnimate ? 'animate' : ''">
+          <img
+          *ngIf="userChoice === 'rock'"
+          src="../../../assets/images/game/rock.png"
+          alt=""
+          class="user-choice"
+          [ngClass]="onAnimate ? 'animate' : ''"
+        />
+
+        <img
+          *ngIf="userChoice === 'paper'"
+          src="../../../assets/images/game/paper.png"
+          alt=""
+          class="user-choice"
+          [ngClass]="onAnimate ? 'animate' : ''"
+        />
+
+        <img
+          *ngIf="userChoice === 'scissors'"
+          src="../../../assets/images/game/scissors.png"
+          alt=""
+          class="user-choice"
+          [ngClass]="onAnimate ? 'animate' : ''"
+        />
         </div>
         <div class="battle-player computer">
           <p class="body-text">Eu</p>
-          <img src="assets/images/{{computerChoice}}.png" alt="" class="computer-choice" [ngClass]="onAnimate ? 'animate' : ''">
+          <img
+            src="../../../assets/images/game/{{ computerChoice }}.png"
+            alt=""
+            class="computer-choice"
+            [ngClass]="onAnimate ? 'animate' : ''"
+          />
         </div>
       </div>
       <div class="options">
-        <button class="btn btn-default" (click)="onUserChoosing($event.target)">Pedra</button>
-        <button class="btn btn-default" (click)="onUserChoosing($event.target)">Papel</button>
-        <button class="btn btn-default" (click)="onUserChoosing($event.target)">Tesoura</button>
+        <button class="btn btn-default" (click)="onUserChoosing('rock')">
+          Pedra
+        </button>
+        <button class="btn btn-default" (click)="onUserChoosing('paper')">
+          Papel
+        </button>
+        <button class="btn btn-default" (click)="onUserChoosing('scissors')">
+          Tesoura
+        </button>
       </div>
 
       <div *ngIf="winner">
         <div *ngIf="winner && winner == 'eu'" class="end-game">
-          <p class="subheadline-text">
-            Eu falei que não pegaria leve! Hahaha
-          </p>
+          <p class="subheadline-text">Eu falei que não pegaria leve! Hahaha</p>
           <button class="btn btn-reset" (click)="onStartGame()">
             Jogar novamente
           </button>
         </div>
         <div *ngIf="winner && winner == 'você'" class="end-game">
-          <p class="subheadline-text">
-            Você venceu, parabéns!
-          </p>
+          <p class="subheadline-text">Você venceu, parabéns!</p>
           <div class="buttons">
             <button class="btn btn-reset" (click)="onStartGame()">
               Jogar novamente
             </button>
-            <a class="btn btn-primary" routerLink="/about-me">
-              Avançar
-            </a>
+            <a class="btn btn-primary" routerLink="/about-me"> Avançar </a>
           </div>
         </div>
         <div *ngIf="winner && winner == 'empate'" class="end-game">
