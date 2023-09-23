@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ProjectsService } from 'src/app/shared/services/projects/projects.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -8,7 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class SideNavComponent {
 
   @Input() sideType!: string;
-  @Output() filterChanged = new EventEmitter<string[]>();
+  filterChanged = new EventEmitter<string[]>();
 
   contactMenu: boolean = true;
   personalMenu: boolean = true;
@@ -21,9 +22,9 @@ export class SideNavComponent {
     { label: 'Javascript', value: 'javascript', image: 'assets/icons/javascript-icon.svg', selected: false },
     { label: 'Typescript', value: 'typescript', image: 'assets/icons/typescript-icon.svg', selected: false },
     { label: 'Angular', value: 'angular', image: 'assets/icons/angular-icon.svg', selected: false },
-    // Adicione mais opções conforme necessário
   ];
 
+  constructor(private projectService: ProjectsService) {}
 
   onPersonalMenu() {
     this.personalMenu = !this.personalMenu;
@@ -38,16 +39,12 @@ export class SideNavComponent {
   }
 
   updateFilter(option: any) {
-    console.log(option.selected);
-
     option.selected = !option.selected;
-
     const selectedFilters = this.filterOptions
       .filter((opt) => opt.selected)
       .map((opt) => opt.value);
 
-      console.log(selectedFilters);
-
-    this.filterChanged.emit(selectedFilters);
+    this.projectService.setFilterOptions(selectedFilters);
+    this.projectService.getInitialProjects();
   }
 }

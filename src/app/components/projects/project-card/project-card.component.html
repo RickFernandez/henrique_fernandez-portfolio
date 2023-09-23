@@ -1,0 +1,18 @@
+<div class="card">
+  <img [src]="project.image" alt="Imagem de exibição do projeto {{ project.title }}">
+  <div class="card-body">
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.description }}</p>
+    <span>Técnologias: {{ project.technologys }}</span>
+  </div>
+  <div class="buttons">
+    <a [href]="project.repositoryLink" class="btn btn-ghost">
+      <img src="assets/icons/github-icon.svg">
+      Repositório
+    </a>
+    <a [href]="project.liveLink ? project.liveLink : ''" class="btn btn-primary" ngClass="{{ !project.liveLink ? 'btn-default' : '' }}">
+      <img src="assets/icons/globe-icon.svg">
+      Projeto
+    </a>
+  </div>
+</div>
