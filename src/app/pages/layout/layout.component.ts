@@ -22,6 +22,9 @@ export class LayoutComponent {
       if (url.includes('/projects')) {
         this.sideType = '/projects'
       }
+      if (url.includes('/contact')) {
+        this.sideType = '/contact'
+      }
     });
   }
 }

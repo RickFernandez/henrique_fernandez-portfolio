@@ -11,6 +11,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { FooterComponent } from './components/core/footer/footer.component';
 import { SideNavComponent } from './components/core/side-nav/side-nav.component';
 import { ProjectModule } from './components/projects/project.module';
+import { ContactModule } from './components/contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,15 @@ import { ProjectModule } from './components/projects/project.module';
     HomeComponent,
     LayoutComponent,
     FooterComponent,
-    SideNavComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     AboutModule,
-    ProjectModule
+    ProjectModule,
+    ContactModule
   ],
   providers: [],
   bootstrap: [AppComponent]
