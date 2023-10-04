@@ -264,3 +264,13 @@ aside {
     white-space: nowrap;
   }
 }
+
+@media screen and (max-width: 768px) {
+  aside {
+    .menu-container {
+      .first-menu {
+        display: none;
+      }
+    }
+  }
+}
