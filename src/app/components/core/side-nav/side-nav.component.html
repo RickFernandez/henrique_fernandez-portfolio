@@ -92,4 +92,54 @@
       </div>
     </div>
   </div>
+  <div class="menu-contact" *ngIf="sideType && sideType == '/contact'">
+    <nav>
+      <div class="contact-infos" (click)="onContactMenu()">
+        <img
+          src="{{
+            contactMenu
+              ? '../../../assets/icons/arrow_down-icon.svg'
+              : '../../../assets/icons/arrow_right-icon.svg'
+          }}"
+          alt=""
+        />
+        <h4>contatos</h4>
+      </div>
+      <ul class="contact-menu" *ngIf="contactMenu">
+        <li>
+          <img src="../../../assets/icons/mail-iconemail-icon.svg" alt="" />
+          <a class="label-text">rickfernandez03@gmail.com</a>
+        </li>
+        <li>
+          <img src="../../../assets/icons/phone-icon.svg" alt="" />
+          <a class="label-text">+55 (11)96424-9643</a>
+        </li>
+      </ul>
+      <div class="social-medias-info" (click)="onSocialMediasMenu()">
+        <img
+          src="{{
+            contactMenu
+              ? '../../../assets/icons/arrow_down-icon.svg'
+              : '../../../assets/icons/arrow_right-icon.svg'
+          }}"
+          alt=""
+        />
+        <h4>veja-tambem</h4>
+      </div>
+      <ul class="contact-menu" *ngIf="socialMediasMenu">
+        <li>
+          <img src="../../../assets/icons/instagram-icon.svg"/>
+          <a href="https://www.instagram.com/coding.rick/?theme=dark" class="label-text" target="_blank">@coding.rick</a>
+        </li>
+        <li>
+          <img src="../../../assets/icons/linkedin-icon.svg"/>
+          <a href="https://www.linkedin.com/in/henrique-fernandez-bb3751212/" class="label-text" target="_blank">LinkedIn: Henrique Fernandez</a>
+        </li>
+        <li>
+          <img src="../../../assets/icons/globe-icon.svg"/>
+          <a href="http://www.henrique-fernandez.site" class="label-text" target="_blank">Portifólio profissional</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </aside>

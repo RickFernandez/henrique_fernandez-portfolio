@@ -9,11 +9,12 @@ import { ProjectsService } from 'src/app/shared/services/projects/projects.servi
 export class SideNavComponent {
 
   @Input() sideType!: string;
-  filterChanged = new EventEmitter<string[]>();
-
   contactMenu: boolean = true;
   personalMenu: boolean = true;
   projectMenu: boolean = true;
+  socialMediasMenu: boolean = true;
+
+  filterChanged = new EventEmitter<string[]>();
 
   filterOptions = [
     { label: 'HTML', value: 'html', image: 'assets/icons/html-icon.svg', selected: false },
@@ -36,6 +37,10 @@ export class SideNavComponent {
 
   onProjectMenu() {
     this.projectMenu = !this.projectMenu;
+  }
+
+  onSocialMediasMenu() {
+    this.socialMediasMenu = !this.socialMediasMenu;
   }
 
   updateFilter(option: any) {
