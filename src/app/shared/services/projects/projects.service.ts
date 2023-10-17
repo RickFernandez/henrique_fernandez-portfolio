@@ -17,10 +17,15 @@ export class ProjectsService {
 
   loadInitialProjects() {
     this.projects = [
-      { image: 'assets/images/certificates/alura/Formação Aplicações web acessíveis.png', title: 'título 1',  description: 'descrição do projeto', technologys: ['html', 'css'], repositoryLink: 'repo-link', liveLink: 'live-link'},
-      { image: 'assets/images/certificates/alura/Formação Aplicações web acessíveis.png', title: 'título 2',  description: 'descrição do projeto', technologys: ['angular', 'typescript', 'scss'], repositoryLink: 'repo-link'},
-      { image: 'assets/images/certificates/alura/Formação Aplicações web acessíveis.png', title: 'título 2',  description: 'descrição do projeto', technologys: ['html', 'css', 'javascript'], repositoryLink: 'repo-link'},
-      { image: 'assets/images/certificates/alura/Formação Aplicações web acessíveis.png', title: 'título 1',  description: 'descrição do projeto', technologys: ['html', 'css'], repositoryLink: 'repo-link', liveLink: 'live-link'},
+      { image: 'assets/images/projects/portfolio-profissional.png', title: 'Henrique Fernandez - Developer',  description: 'Site profissional', technologys: ['wordpress', 'elementor'], repositoryLink: 'repo-link', liveLink: 'https://www.henrique-fernandez.site'},
+      { image: 'assets/images/projects/doctorcare.png', title: 'DoctorCare',  description: 'Landing Page da assistência médica DoctorCare', technologys: ['html', 'caa', 'javascript'], repositoryLink: 'repo-link', liveLink: 'https://hf-doctorcare.netlify.app/'},
+      { image: 'assets/images/projects/wine4iu.png', title: 'Wine4iu',  description: 'E-commerce de vinho', technologys: ['Plataforma nuvemshop'], repositoryLink: 'repo-link', liveLink: 'https://wine4iu.lojavirtualnuvem.com.br/'},
+      { image: 'assets/images/projects/vidraçaria-pereira.png', title: 'Vidraçaria Pereira',  description: 'Landing Page para divulgação da Vidraçaria Pereira', technologys: ['html', 'css'], repositoryLink: 'repo-link', liveLink: 'https://vidracariapereira.com.br/'},
+      { image: 'assets/images/projects/elvas_dantas-advocacia.png', title: 'Elvas Dantas Advocacia',  description: 'Landing Page da advocacia Elvas Dantas', technologys: ['wordpress', 'elementor'], repositoryLink: 'repo-link', liveLink: 'https://www.henrique-fernandez.site/advocacia/'},
+      { image: 'assets/images/projects/alura-viagens.png', title: 'Alura Viagens',  description: 'Agência de viagens Alura-Viagens', technologys: ['wordpress', 'elementor'], repositoryLink: 'repo-link', liveLink: 'https://www.henrique-fernandez.site/alura-viagens/'},
+      { image: 'assets/images/projects/lp-smartwatch.png', title: 'Smartwatch',  description: 'Página de vendas para o produto Smartwatch', technologys: ['wordpress', 'elementor'], repositoryLink: 'repo-link', liveLink: 'https://www.henrique-fernandez.site/smartwatch/'},
+      { image: 'assets/images/projects/hfood.png', title: 'HFood',  description: 'Food commerce. Inspirado no Ifood', technologys: ['angular', 'typescript', 'scss'], repositoryLink: 'repo-link', liveLink: 'https://hf-hfood.netlify.app/'},
+      { image: 'assets/images/projects/meteora-store.png', title: 'Meteora Store',  description: 'E-commece de roupas', technologys: ['angular', 'typescript', 'scss'], repositoryLink: 'repo-link', liveLink: 'https://hf-meteora-store.netlify.app/'},
     ];
   }
 

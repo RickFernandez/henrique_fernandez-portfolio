@@ -4,5 +4,5 @@ export interface Project {
   description: string;
   technologys: string[];
   liveLink?: string
-  repositoryLink: string
+  repositoryLink?: string
 }
