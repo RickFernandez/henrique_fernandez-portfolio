@@ -1,12 +1,17 @@
 <section class="scrollbar">
-  <form>
+  <form action="https://formsubmit.co/rickfernandez03@gmail.com" method="POST">
     <p class="label-text">
       <label for="name" id="name">_nome:</label>
-      <input type="text" name="name" placeholder="// Nome Sobrenome" />
+      <input type="text" name="name" placeholder="// Nome Sobrenome" required />
     </p>
     <p class="label-text">
       <label for="email" id="email">_email:</label>
-      <input type="email" name="email" placeholder="// seu@email.com" />
+      <input
+        type="email"
+        name="email"
+        placeholder="// seu@email.com"
+        required
+      />
     </p>
     <p class="label-text">
       <label for="subject" id="subject">_assunto:</label>
@@ -14,6 +19,7 @@
         type="text"
         name="subject"
         placeholder="// Qual o assunto da mensagem?"
+        required
       />
     </p>
     <p class="label-text">
@@ -22,6 +28,7 @@
         type="textarea"
         name="message"
         placeholder="// Digite sua mensagem aqui..."
+        required
       ></textarea>
     </p>
     <button type="submit" class="btn-default">Enviar</button>
