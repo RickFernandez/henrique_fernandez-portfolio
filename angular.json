@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "new-portfolio": {
+    "henrique_fernandez-portfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -39,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/new-portfolio",
+            "outputPath": "dist/henrique_fernandez-portfolio",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -87,10 +87,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "new-portfolio:build:production"
+              "browserTarget": "henrique_fernandez-portfolio:build:production"
             },
             "development": {
-              "browserTarget": "new-portfolio:build:development"
+              "browserTarget": "henrique_fernandez-portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,7 +98,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "new-portfolio:build"
+            "browserTarget": "henrique_fernandez-portfolio:build"
           }
         },
         "test": {
