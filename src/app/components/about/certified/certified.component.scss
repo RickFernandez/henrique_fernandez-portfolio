@@ -27,3 +27,9 @@ section {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  section > div {
+    gap: 3%;
+  }
+}
