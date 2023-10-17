@@ -8,3 +8,11 @@ section {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

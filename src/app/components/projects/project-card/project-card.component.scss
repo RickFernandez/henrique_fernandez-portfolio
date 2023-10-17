@@ -1,4 +1,4 @@
-@import '../../../shared/styles/variables.scss';
+@import "../../../shared/styles/variables.scss";
 
 .card {
   max-width: 350px;
@@ -65,21 +65,31 @@
 
     .btn-ghost {
       img {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(113%) hue-rotate(317deg) brightness(117%) contrast(100%);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(5%)
+          saturate(113%) hue-rotate(317deg) brightness(117%) contrast(100%);
       }
     }
 
     .btn-primary,
     .btn-default {
       img {
-        filter: brightness(0) saturate(100%) invert(4%) sepia(75%) saturate(350%) hue-rotate(148deg) brightness(95%) contrast(103%);
+        filter: brightness(0) saturate(100%) invert(4%) sepia(75%)
+          saturate(350%) hue-rotate(148deg) brightness(95%) contrast(103%);
       }
     }
 
     .btn-primary:hover {
       img {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(113%) hue-rotate(317deg) brightness(117%) contrast(100%);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(5%)
+          saturate(113%) hue-rotate(317deg) brightness(117%) contrast(100%);
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 300px;
+    max-width: 300px;
   }
 }
