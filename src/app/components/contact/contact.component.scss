@@ -59,3 +59,18 @@ section {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  section > form {
+    p {
+      input,
+      textarea {
+        width: 100%;
+      }
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}
