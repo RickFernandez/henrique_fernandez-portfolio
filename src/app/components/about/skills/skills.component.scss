@@ -34,3 +34,25 @@ section {
     font-weight: normal;
   }
 }
+
+@media screen and (max-width: 768px) {
+  section {
+    .skills {
+      justify-content: space-between;
+
+      .skill-container {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  section {
+    .skills {
+      .skill-container {
+        width: 100%;
+      }
+    }
+  }
+}
