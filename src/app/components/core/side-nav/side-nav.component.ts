@@ -23,6 +23,8 @@ export class SideNavComponent {
     { label: 'Javascript', value: 'javascript', image: 'assets/icons/javascript-icon.svg', selected: false },
     { label: 'Typescript', value: 'typescript', image: 'assets/icons/typescript-icon.svg', selected: false },
     { label: 'Angular', value: 'angular', image: 'assets/icons/angular-icon.svg', selected: false },
+    { label: 'Wordpress', value: 'wordpress', image: 'assets/icons/wordpress-icon.svg', selected: false },
+    { label: 'Elementor', value: 'elementor', image: 'assets/icons/elementor-icon.svg', selected: false },
   ];
 
   constructor(private projectService: ProjectsService) {}
