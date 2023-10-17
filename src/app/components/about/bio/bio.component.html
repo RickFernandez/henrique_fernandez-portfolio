@@ -1,9 +1,13 @@
 <section class="scrollbar">
-  <ol>
+  <ol *ngIf="!onResponsive">
     <li><span>/**</span></li>
     <li>
       <span>*</span>
       <p>Sobre Mim:</p>
+    </li>
+    <li>
+      <span>*</span>
+      <p>Me chamo Henrique Fernandez, mas pode me chamar de Rick! =)</p>
     </li>
     <li>
       <span>*</span>
@@ -15,7 +19,7 @@
     </li>
     <li>
       <span>*</span>
-      <p>onde estudei Desenvolvimento Web e Mobile Full-Stack.</p>
+      <p>onde aprendi Desenvolvimento Web e Mobile Full-Stack.</p>
     </li>
     <li>
       <span>*</span>
@@ -26,7 +30,7 @@
     </li>
     <li>
       <span>*</span>
-      <p>Trabalhei na Exadel Company, uma empresa multinacional da área de FinTech</p>
+      <p>Trabalhei na Exadel Company, uma multinacional da área de FinTech</p>
     </li>
     <li>
       <span>*</span>
@@ -38,15 +42,15 @@
     </li>
     <li>
       <span>*</span>
-      <p>Através da mesma, fui alocado em um projeto no banco BTG Pactual.</p>
+      <p>Através da mesma fui alocado em um projeto no banco BTG Pactual.</p>
     </li>
     <li>
       <span>*</span>
-      <p>Neste período atuei com sistemas e projetos legados e atuais,</p>
+      <p>Neste período atuei com sistemas atuais e legados,</p>
     </li>
     <li>
       <span>*</span>
-      <p>realizando refatorações e melhorias.</p>
+      <p>realizando melhorias e refatorações.</p>
     </li>
     <li>
       <span>*</span>
@@ -54,17 +58,38 @@
     </li>
     <li>
       <span>*</span>
-      <p>onde desenvolvi tanto a prototipação das interfaces, quanto projeto em si.</p>
+      <p>atuando desde a prototipação de sua interface,</p>
+    </li>
+    <li>
+      <span>*</span>
+      <p>até o desenvolvimento do projeto em si</p>
     </li>
     <li>
       <span>*</span>
     </li>
     <li>
       <span>*</span>
-      <p>Hoje atuo como web designer e desenvolvedor freelancer.</p>
+      <p>No momento atuo como Desenvolvedor Web/ Full-Stack freelancer.</p>
     </li>
     <li>
       <span>*/</span>
     </li>
   </ol>
+
+  <p *ngIf="onResponsive">
+    <strong>// Sobre Mim:</strong>
+    <span>/**</span>
+    Me chamo Henrique Fernandez, mas pode me chamar de Rick! =)
+    <br>
+    Tenho 20 anos. Sou graduado em Sistemas para Internet pela FIAP, onde estudei Desenvolvimento Web e Mobile Full-Stack.
+    <br><br>
+    Mais de 1 ano de experiência na área onde trabalhei na Exadel Company, uma multinacional da área de FinTech que fornece serviços gerenciados, incluindo a construção, implementação e suporte de sistemas para o mercado financeiro.
+    <br>
+    Através da mesma fui alocado em um projeto dentro do banco BTG Pactual, um dos clientes da empresa.
+    <br>
+    Neste período atuei com sistemas atuais e legados, realizando melhorias e refatorações. Além disso, participei do desenvolvimento de novos projetos, atuando desde a prototipação de sua interface, até o desenvolvimento do projeto em si (tanto o front-end quando o back-end).
+    <br><br>
+    No momento estou atuando como Desenvolvedor Web/ Full-Stack freelancer.
+    <span>*/</span>
+  </p>
 </section>

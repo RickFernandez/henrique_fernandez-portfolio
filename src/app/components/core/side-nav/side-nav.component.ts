@@ -28,7 +28,6 @@ export class SideNavComponent {
   constructor(private projectService: ProjectsService) {}
 
   ngOnInit() {
-    console.log(window.innerWidth);
     if (window.innerWidth === 768 || window.innerWidth < 768) {
       this.contactMenu = false;
       this.personalMenu = false;

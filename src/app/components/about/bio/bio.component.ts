@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./bio.component.scss']
 })
 export class BioComponent {
+  onResponsive: boolean = false;
 
+  ngOnInit() {
+    let screenWidth = window.innerWidth;
+    screenWidth <= 768 ? this.onResponsive = !this.onResponsive : this.onResponsive;
+  }
 }
