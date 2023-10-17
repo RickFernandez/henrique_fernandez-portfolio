@@ -39,16 +39,16 @@
 
     <nav class="responsive-menu-list" #menuList *ngIf="menuOpened">
       <ul>
-        <li class="label-text" routerLink="/home" routerLinkActive="active">
+        <li class="label-text" routerLink="/home" routerLinkActive="active" (click)="onOpenMenu()">
           <a> _hello </a>
         </li>
-        <li class="label-text" routerLink="/about-me" routerLinkActive="active">
+        <li class="label-text" routerLink="/about-me" routerLinkActive="active" (click)="onOpenMenu()">
           <a> _sobre-mim </a>
         </li>
-        <li class="label-text" routerLink="/projects" routerLinkActive="active">
+        <li class="label-text" routerLink="/projects" routerLinkActive="active" (click)="onOpenMenu()">
           <a> _projetos </a>
         </li>
-        <li class="label-text" routerLink="/contact" routerLinkActive="active">
+        <li class="label-text" routerLink="/contact" routerLinkActive="active" (click)="onOpenMenu()">
           <a> _contato </a>
         </li>
       </ul>
