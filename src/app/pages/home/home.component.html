@@ -6,9 +6,9 @@
       <p class="subheadline-text">> desenvolvedor Full Stack</p>
     </div>
     <div class="text-codes">
-      <p class="label-text comment desktop">// Vença o jogo para continuar</p>
+      <p class="label-text comment desktop">// Vença o jogo para liberar a navegação =)</p>
       <p class="label-text comment desktop">
-        // Você também pode ver na minha página do Github
+        // Veja meu perfil do Github!!!
       </p>
       <p class="label-text comment mobile">// Veja meu perfil do GitHub</p>
       <a
@@ -87,7 +87,7 @@
             <button class="btn btn-reset" (click)="onStartGame()">
               Jogar novamente
             </button>
-            <a class="btn btn-primary" routerLink="/about-me"> Avançar </a>
+            <a (click)="allowNavigation()" class="btn btn-primary" routerLink="/about-me"> Avançar </a>
           </div>
         </div>
         <div *ngIf="winner && winner == 'empate'" class="end-game">
@@ -106,7 +106,7 @@
         <p class="code-snippet-text">// não vou pegar leve! 😎</p>
         <p class="code-snippet-text">// Boa sorte!</p>
       </div>
-      <a class="btn btn-ghost" routerLink="/about-me">Pular</a>
+      <a (click)="allowNavigation()" class="btn btn-ghost" routerLink="/about-me">Pular</a>
     </div>
   </div>
 </section>

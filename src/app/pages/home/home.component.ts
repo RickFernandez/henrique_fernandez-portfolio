@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -17,8 +18,14 @@ export class HomeComponent {
     'scissors'
   ];
 
+  constructor(private authService: AuthService) {}
+
   ngOnInit(): void {
     this.onStartGame();
+  }
+
+  allowNavigation() {
+    this.authService.navigationIsAllow = true;
   }
 
   onUserChoosing(userChoice: string): void {

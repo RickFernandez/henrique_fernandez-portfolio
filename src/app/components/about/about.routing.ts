@@ -3,13 +3,24 @@ import { BioComponent } from './bio/bio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { CertifiedComponent } from './certified/certified.component';
+import { AuthGuard } from 'src/app/auth/auth.guard';
 
 const routes: Routes = [
-    { path: 'about-me', redirectTo: 'about-me/bio', pathMatch: 'full' },
-    { path: 'about-me/bio', component: BioComponent },
-    { path: 'about-me/skills', component: SkillsComponent },
-    { path: 'about-me/experiences', component: ExperiencesComponent },
-    { path: 'about-me/certifieds', component:  CertifiedComponent},
+  {
+    path: 'about-me',
+    redirectTo: 'about-me/bio',
+    pathMatch: 'full'
+  },
+  {
+    path: 'about-me',
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'bio', component: BioComponent },
+      { path: 'skills', component: SkillsComponent },
+      { path: 'experiences', component: ExperiencesComponent },
+      { path: 'certifieds', component: CertifiedComponent },
+    ]
+  }
 ];
 
 export const AboutRoutes = RouterModule.forChild(routes);
