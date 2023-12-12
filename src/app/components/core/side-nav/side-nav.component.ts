@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ProjectsService } from 'src/app/shared/services/projects/projects.service';
+import { ProjectsService } from 'src/app/components/projects/projects.service';
 
 @Component({
   selector: 'app-side-nav',
