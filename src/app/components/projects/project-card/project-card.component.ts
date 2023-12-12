@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Project } from 'src/app/shared/models/project';
+import { Project } from 'src/app/shared/models/Project';
 
 @Component({
   selector: 'app-project-card',
