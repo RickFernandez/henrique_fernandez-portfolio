@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Project } from '../../shared/models/Project';
+import { Project } from 'src/app/shared/models/Project';
 
 @Injectable({
   providedIn: 'root',
@@ -44,7 +44,7 @@ export class ProjectsService {
       return this.projects;
     } else {
       return this.projects.filter((project) =>
-        project.technologys.some((tech) => selectedFilters.includes(tech))
+        project.technologys.some((tech: any) => selectedFilters.includes(tech))
       );
     }
   }
