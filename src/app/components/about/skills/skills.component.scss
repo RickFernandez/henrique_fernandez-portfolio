@@ -16,7 +16,7 @@ section {
     flex-wrap: wrap;
 
     .skill-container {
-      width: 30%;
+      width: 100%;
       display: flex;
       gap: 1rem;
       flex-direction: column;
@@ -32,27 +32,5 @@ section {
 
   h3, h4 {
     font-weight: normal;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  section {
-    .skills {
-      justify-content: space-between;
-
-      .skill-container {
-        width: 40%;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 425px) {
-  section {
-    .skills {
-      .skill-container {
-        width: 100%;
-      }
-    }
   }
 }
