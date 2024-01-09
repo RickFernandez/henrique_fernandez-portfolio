@@ -1,9 +1,4 @@
-
-# CODING.RICK
-
-
-
-## Olá! Seja bem-vindo ao meu portifólio. 🤓👋
+# Olá! Seja bem-vindo ao meu portifólio. 🤓👋
 
 
 ## 🚀 Sobre Mim
