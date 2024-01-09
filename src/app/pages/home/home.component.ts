@@ -70,7 +70,13 @@ export class HomeComponent {
       if (userChoice === computerChoice) {
         this.winner = 'empate';
       } else {
-        this.winner = choices[userChoice].beats === computerChoice ? choices[userChoice].message : 'eu';
+        if (choices[userChoice].beats === computerChoice) {
+          this.winner = choices[userChoice].message;
+          this.authService.navigationIsAllow = true;
+        }
+        else {
+          this.winner = 'eu';
+        }
       }
     }, 500);
   }
