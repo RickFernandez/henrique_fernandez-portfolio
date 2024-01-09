@@ -19,6 +19,7 @@ div.container {
 
   main.onSideNav {
     display: grid;
+    grid-template-columns: 350px auto;
     grid-template-rows: 100%;
     grid-template-areas: "sidenav content";
 
