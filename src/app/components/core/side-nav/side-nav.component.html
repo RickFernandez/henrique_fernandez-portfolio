@@ -1,10 +1,5 @@
 <aside>
   <div class="menu-container" *ngIf="sideType && sideType == '/about-me'">
-    <div class="first-menu">
-      <img src="../../../assets/icons/terminal-icon.svg" alt="" />
-      <img src="../../../assets/icons/selected_menu-icon.svg" alt="" />
-      <img src="../../../assets/icons/game-icon.svg" alt="" />
-    </div>
     <div class="second-menu">
       <nav>
         <div class="personal-infos" (click)="onPersonalMenu()">
@@ -54,11 +49,13 @@
         <ul class="contact-menu" *ngIf="contactMenu">
           <li>
             <img src="../../../assets/icons/mail-iconemail-icon.svg" alt="" />
-            <a href="mailto:rickfernandez03@gmail.com" class="label-text">rickfernandez03@gmail.com</a>
+            <a href="mailto:rickfernandez03@gmail.com" class="label-text"
+              >rickfernandez03@gmail.com</a
+            >
           </li>
           <li>
-            <img src="../../../assets/icons/phone-icon.svg" alt="" />
-            <a href="tel:11964249643" class="label-text">+55 (11)96424-9643</a>
+            <img src="../../../assets/icons/whatsapp-icon.svg" alt="" />
+            <a href="https://wa.me/5511964249643?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+seu+portif%C3%B3lio.+%F0%9F%91%8B%F0%9F%98%81" class="label-text" target="_blank">+55 (11)96424-9643</a>
           </li>
         </ul>
       </nav>
@@ -85,8 +82,8 @@
           [name]="option.value"
           id="{{ option.value }}"
         />
-        <img [src]="option.image" [alt]="option.label + 'ícone'" >
-        <label [ngClass]="{'selected': option.selected}" [for]="option.value">
+        <img [src]="option.image" [alt]="option.label + 'ícone'" />
+        <label [ngClass]="{ selected: option.selected }" [for]="option.value">
           {{ option.label }}
         </label>
       </div>
@@ -108,11 +105,13 @@
       <ul class="contact-menu" *ngIf="contactMenu">
         <li>
           <img src="../../../assets/icons/mail-iconemail-icon.svg" alt="" />
-          <a href="mailto:rickfernandez03@gmail.com" class="label-text">rickfernandez03@gmail.com</a>
+          <a href="mailto:rickfernandez03@gmail.com" class="label-text"
+            >rickfernandez03@gmail.com</a
+          >
         </li>
         <li>
-          <img src="../../../assets/icons/phone-icon.svg" alt="" />
-          <a href="tel:11964249643" class="label-text">+55 (11)96424-9643</a>
+          <img src="../../../assets/icons/whatsapp-icon.svg" alt="" />
+          <a href="https://wa.me/5511964249643?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+seu+portif%C3%B3lio.+%F0%9F%91%8B%F0%9F%98%81" class="label-text" target="_blank">+55 (11)96424-9643</a>
         </li>
       </ul>
       <div class="social-medias-info" (click)="onSocialMediasMenu()">
@@ -128,16 +127,31 @@
       </div>
       <ul class="contact-menu" *ngIf="socialMediasMenu">
         <li>
-          <img src="../../../assets/icons/instagram-icon.svg"/>
-          <a href="https://www.instagram.com/coding.rick/?theme=dark" class="label-text" target="_blank">@coding.rick</a>
+          <img src="../../../assets/icons/instagram-icon.svg" />
+          <a
+            href="https://www.instagram.com/coding.rick/?theme=dark"
+            class="label-text"
+            target="_blank"
+            >@coding.rick</a
+          >
         </li>
         <li>
-          <img src="../../../assets/icons/linkedin-icon.svg"/>
-          <a href="https://www.linkedin.com/in/henrique-fernandez-bb3751212/" class="label-text" target="_blank">LinkedIn: Henrique Fernandez</a>
+          <img src="../../../assets/icons/linkedin-icon.svg" />
+          <a
+            href="https://www.linkedin.com/in/henrique-fernandez-bb3751212/"
+            class="label-text"
+            target="_blank"
+            >LinkedIn: Henrique Fernandez</a
+          >
         </li>
         <li>
-          <img src="../../../assets/icons/globe-icon.svg"/>
-          <a href="http://www.henrique-fernandez.site" class="label-text" target="_blank">Portifólio profissional</a>
+          <img src="../../../assets/icons/globe-icon.svg" />
+          <a
+            href="http://www.henrique-fernandez.site"
+            class="label-text"
+            target="_blank"
+            >Portifólio profissional</a
+          >
         </li>
       </ul>
     </nav>
