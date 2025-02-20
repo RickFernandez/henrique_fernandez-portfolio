@@ -11,6 +11,7 @@ import { ProjectModule } from './components/projects/project.module';
 import { ContactModule } from './components/contact/contact.module';
 import { LayoutModule } from './pages/layout/layout.module';
 import { HomeModule } from './pages/home/home.module';
+import { GlobalDialogModule } from './shared/components/global-dialog/global-dialog.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomeModule } from './pages/home/home.module';
     ProjectModule,
     ContactModule,
     LayoutModule,
-    HomeModule
+    HomeModule,
+    GlobalDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
