@@ -109,6 +109,11 @@ body {
   background-color: $secondary-green;
 }
 
+.global-dialog-backdrop {
+  opacity: 0.8;
+  background-color: $primary-black;
+}
+
 @media screen and (max-width: 768px) {
   .headline-text {
     font-size: 3.125rem;
