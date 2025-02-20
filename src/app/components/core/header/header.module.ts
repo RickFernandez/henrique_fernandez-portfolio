@@ -10,8 +10,7 @@ import { MatDialogModule } from '@angular/material/dialog';
   ],
   imports: [
     CommonModule,
-    FooterModule,
-    MatDialogModule
+    FooterModule
   ],
   exports: [
     HeaderComponent
