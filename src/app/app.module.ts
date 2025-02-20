@@ -5,22 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AboutModule } from './components/about/about.module';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/core/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LayoutComponent } from './pages/layout/layout.component';
-import { FooterComponent } from './components/core/footer/footer.component';
-import { SideNavComponent } from './components/core/side-nav/side-nav.component';
 import { ProjectModule } from './components/projects/project.module';
 import { ContactModule } from './components/contact/contact.module';
+import { LayoutModule } from './pages/layout/layout.module';
+import { HomeModule } from './pages/home/home.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    LayoutComponent,
-    FooterComponent,
-    SideNavComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +22,9 @@ import { ContactModule } from './components/contact/contact.module';
     AppRoutingModule,
     AboutModule,
     ProjectModule,
-    ContactModule
+    ContactModule,
+    LayoutModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
